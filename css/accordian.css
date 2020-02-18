@@ -1,0 +1,64 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 400px;
+}
+
+.panel {
+  border: 1px solid #ddd;
+  margin: 1px 0;
+  border-radius: 3px;
+}
+
+.panel h2 {
+  color: #454545;
+  font-weight: 400;
+  padding: 5px 10px;
+  margin: 0;
+  background-color: #e7e7e7;
+  cursor: pointer;
+  font-size: 16px;
+}
+.panel h2:hover {
+  background-color: #dad8d8;
+}
+
+.panel div {
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease;
+}
+
+.panel div p {
+  padding: 10px;
+}
+
+/* Next to the input box there should be a 'div' element and we target it */
+.panel input[type='radio']:checked ~ div {
+  max-height: 500px;
+  transition: max-height 1500ms ease;
+}
+
+.panel input {
+  display: none;
+}
+
+.panel input[type='radio']:checked ~ label h2 {
+  background-color: #4099f1;
+  border: 1px solid #1f5285;
+  color: white;
+}
+
+.panel h2:before {
+  content: '\25B6';
+  font-size: 12px;
+  margin-right: 7px;
+}
+.panel input[type='radio']:checked ~ label h2:before{
+  content: '\25bc';
+  color: white;
+
+}
