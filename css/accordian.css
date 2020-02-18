@@ -57,8 +57,35 @@ body {
   font-size: 12px;
   margin-right: 7px;
 }
-.panel input[type='radio']:checked ~ label h2:before{
+.panel input[type='radio']:checked ~ label h2:before {
   content: '\25bc';
   color: white;
+}
 
+/* Darken an image */
+.outer-container {
+  margin-top: 10rem;
+  border: 1px dashed grey;
+  display: flex;
+}
+.image-container {
+  background-color: black;
+}
+.img-one {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.img-one:hover {
+  opacity: 1;
+}
+
+/* Use CSS Filter */
+.img-two {
+  filter: brightness(30%);
+  transition: filter 0.3s ease;
+}
+
+.img-two:hover {
+  filter: brightness(100%);
 }
